@@ -1,0 +1,52 @@
+[
+  {   
+       "type":"Linux",
+       "BlockDeviceMappings": [
+           {
+               "DeviceName" :"/dev/sdh",                    
+             "Ebs": {
+               "DeleteOnTermination": true,
+               "VolumeSize": 30,
+               "VolumeType": "standard"
+             }
+           }
+       ],
+       "Monitoring": {
+           "Enabled": true
+         },
+       "ImageId": "ami-5d055232",
+       "InstanceType": "t2.micro",
+       "MinCount": 1,
+       "MaxCount": 1,
+       "KeyName":"",
+       "SecurityGroupIds": [
+         ],
+       "SecurityGroups": [
+         ]
+   },  
+   {  
+       "type":"Windows",   
+       "BlockDeviceMappings": [
+           {
+             "DeviceName" :"/dev/sdh",
+             "Ebs": {
+               "DeleteOnTermination": true,
+               "SnapshotId": "snap-0182fac24712ab717"
+             }
+           }
+       ],  
+       "Monitoring": {
+           "Enabled": true
+         },       
+       "ImageId": "ami-1cc1ca66",
+       "InstanceType": "t2.micro",
+       "MinCount": 1,
+       "MaxCount": 1,
+       "KeyName":"",
+       "SecurityGroupIds": [
+         ],
+       "SecurityGroups": [
+         ]
+   }
+
+]
